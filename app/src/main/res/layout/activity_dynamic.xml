@@ -1,0 +1,281 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="?actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:fitsSystemWindows="true"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/screen_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SCREEN TITLE"
+                        android:textSize="30sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="sans-serif-condensed-medium"/>
+
+
+                    <!--ELECTRICITY BILL-->
+                    <!--Sc Number-->
+                    <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/sc_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtScnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_sc_number"
+                        android:background="@drawable/rectangle_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="20sp"
+
+                        />
+                </LinearLayout>
+
+                    <!--month-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/txtMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Month"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+
+                        <LinearLayout
+                            android:background="@drawable/rectangle_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/spinner_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--consumer id-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/consumer_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/txtConsumerid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_consumer_id"
+                            android:background="@drawable/rectangle_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            />
+                    </LinearLayout>
+
+
+                    <!--consumer email-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/consumer_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/txtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_consumer_email"
+                            android:background="@drawable/rectangle_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="20sp"
+                            android:inputType="textEmailAddress"
+
+                            />
+                    </LinearLayout>
+
+                    <!--consumer phone number-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/consumer_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/txtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_consumer_phone_number"
+                            android:background="@drawable/rectangle_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="20sp"
+                            android:inputType="phone"
+                            />
+                    </LinearLayout>
+
+                    <!--consumer name-->
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/consumer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/txtConsumername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="15sp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_consumer_name"
+                            android:background="@drawable/rectangle_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="20sp"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:text="PROCEED"
+            android:onClick="onClickProceed"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="bottom"
+            />
+
+    </FrameLayout>
+
+
+</LinearLayout>

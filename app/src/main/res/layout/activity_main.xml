@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PICK A SERVICE"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif-condensed-medium"/>
+
+    <LinearLayout
+        android:background="@drawable/outline"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+       >
+
+        <Spinner
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/options"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:text="PROCEED"
+        android:background="@color/colorPrimary"/>
+    
+</LinearLayout>
