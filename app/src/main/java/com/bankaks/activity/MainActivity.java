@@ -1,5 +1,15 @@
 package com.bankaks.activity;
-
+/**
+ *  This is a Options aCtivity
+ *
+ * We will select the options here. The user will pick a service from a dropdown list. For this
+ * assessment, we will have dummy options: Option 1, Option 2 and Option 3. Once
+ * the option is selected and user proceeds
+ *
+ * @author Debashish
+ * @version 2020.12.06
+ * @since 1.0
+ */
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

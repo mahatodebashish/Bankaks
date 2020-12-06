@@ -1,5 +1,13 @@
 package com.bankaks.activity;
-
+/**
+ *  This is a Dynamic aCtivity
+ *
+ * This will load all the UI fields according to Options selected .
+ *
+ * @author Debashish
+ * @version 2020.12.06
+ * @since 1.0
+ */
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
@@ -30,7 +38,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import static com.bankaks.utils.JsonParser.showViewsAccordingtoType;
 
 public class DynamicActivity extends AppCompatActivity {
 
@@ -67,7 +74,13 @@ public class DynamicActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
-        AndroidNetworking.get(Constants.BASE_URL+"task/{type}")
+        /**
+         * This class is used for API call
+         *
+         * @param type The option type is passed
+         * @return The function returns the response according to which we dynamically show the UI fields
+         */
+        AndroidNetworking.get(Constants.TASK+"{type}")
                 .addPathParameter("type", type)
                 .setPriority(Priority.HIGH)
                 .build()
@@ -193,19 +206,29 @@ public class DynamicActivity extends AppCompatActivity {
         btnProceed=findViewById(R.id.btnProceed);
     }
 
+    /**
+     * Method that checks for field validation
+     *
+     * @param view The onClick View is passed
+     * @return The function checks for field validation , if validates then go to the Success Page.
+     */
+
     public void onClickProceed(View view){
 
-        if(edit_sc_number.getText().toString().equals("")||edit_consumer_id.toString().equals("")||
+        /*if(edit_sc_number.getText().toString().equals("")||edit_consumer_id.toString().equals("")||
                 edit_consumer_phone_number.getText().toString().equals("")||edit_consumer_email.getText().toString().equals("")||
                 edit_consumer_name.getText().toString().equals("")){
             Toast.makeText(this, "SOME FIELD(S) ARE BLANK", Toast.LENGTH_SHORT).show();
-        }
-        
+            return;
+        }*/
+
         if(!(edit_consumer_email.getText().toString().matches(regex_email))){
             Toast.makeText(this, "WRONG EMAIL ADDRESS", Toast.LENGTH_SHORT).show();
+            return;
     }
         if(!edit_consumer_phone_number.getText().toString().matches(regex_phone)){
             Toast.makeText(this, "WRONG PHONE NUMBER", Toast.LENGTH_SHORT).show();
+            return;
         }
 
 

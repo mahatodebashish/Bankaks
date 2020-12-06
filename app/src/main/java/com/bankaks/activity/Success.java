@@ -1,5 +1,11 @@
 package com.bankaks.activity;
-
+/**
+ *  This is a Success Page - after the successfull validation of user input fields
+ *
+ * @author Debashish
+ * @version 2020.12.06
+ * @since 1.0
+ */
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
